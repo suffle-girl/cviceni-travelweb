@@ -66,29 +66,46 @@ img {
 
 nav {
   /* všimni si, že při scrollování obsahem stránky navigace zůstává na vrchu viewportu  */
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 main {
   /* zajisti, aby navigace nepřekrývala obsah. Navigace je vysoká 40px*/
+  position: relative;
+  top: 40px;
 }
 
 .travel {
   /* tento div při scrollování neodjede s obsahem, ale přilepí 10px pod navigací (50px od vrchu obsahu) */
+  position: sticky;
+  top: 10%;
+  z-index: 1;
 }
 
 .picture {
   /* je potřeba zajistit, abychom mohli přesunout popisek obrázku do pravého horního rohu obrázku */
+  position: relative;
 }
 
 .picture-description {
   /* popisek obrázku se nachází přímo na obrázku, 10px shora a 10px zprava */
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .mountains,
 .sea {
   /* obrázky hor a moře jsou zleva odsunuty o 450px */
+  position: relative;
+  left: 450px;
 }
 
 .chat {
   /* malého chatbota na stránce vidíme pořád. Visí vpravo dole, 10px od okrajů */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
